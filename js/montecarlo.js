@@ -25,7 +25,7 @@ class montecarlo {
     this.background();
     this.vc1.forecolor( 0, 50, 50 );
 
-    elm5.innerHTML = "理論値：" + this.answer;
+    elm5.innerHTML = "理論値：" + Math.round( this.answer * 10000 ) / 10000;
 
     var timer1 = new vbTimer();
     timer1.interval = 30;
@@ -66,15 +66,15 @@ class montecarlo {
       }
       this.vc3.stroke();
 
-      elm6.innerHTML = "計算値：" + answer;
+      elm6.innerHTML = "計算値：" + Math.round( answer * 10000 ) / 10000;
 
       this.vc1.beginPath();
-      this.vc1.forecolor( 0, 0, 255 );
+      this.vc1.forecolor( 50, 50, 250, 0.3 );
       for( var i=0; i<in_num; i++ ) this.vc1.pset( x_in[i], y_in[i] );
       this.vc1.stroke();
 
       this.vc1.beginPath();
-      this.vc1.forecolor( 255, 0, 0 );
+      this.vc1.forecolor( 250, 50, 50, 0.3 );
       for( var i=0; i<out_num; i++ ) this.vc1.pset( x_out[i], y_out[i] );
       this.vc1.stroke();
 
@@ -109,7 +109,7 @@ class montecarlo {
       this.outer = 0;
       this.inner = 0;
       this.N = this.number/100;
-      elm5.innerHTML = "理論値：" + this.answer;
+      elm5.innerHTML = "理論値：" + Math.round( this.answer * 10000 ) / 10000;
     });
   }
 
