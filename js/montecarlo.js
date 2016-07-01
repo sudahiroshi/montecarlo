@@ -138,7 +138,7 @@ class montecarlo {
     this.vc4.line( 0, 4, 0, 0 );
     this.vc4.stroke();
     this.vc3.lineStart( 0, 0 );
-    this.vc3.forecolor( 200, 0, 200 );
+    this.vc3.forecolor( 180, 0, 200, 0.3 );
   }
 }
 
